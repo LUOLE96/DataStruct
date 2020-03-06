@@ -16,8 +16,8 @@ int main(void)
         
     for(i = 0;i < sizeof(arr)/sizeof(*arr);i++)
     {
-        //if(list_insert_at(l,0,&arr[i]))
-        if(list_order_insert(l,&arr[i]))
+        if(list_insert_at(l,0,&arr[i]))
+        //if(list_order_insert(l,&arr[i]))
             exit(1);
     }
 
@@ -31,7 +31,7 @@ int main(void)
 
     datatype value1;
  
-    int err = list_delete_at(l,2,&value1);
+    int err = list_delete_at(l,7,&value1);
     if(err)
         exit(1);
     list_display(l);
